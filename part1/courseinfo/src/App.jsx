@@ -14,7 +14,7 @@ const App = () => {
     <div>
       <Header course={course}></Header>      
       <Content parts={parts}/>
-      <Total total={part1.exerciseCount + part2.exerciseCount + part3.exerciseCount}/>
+      <Total total={parts.reduce((sum, part) => sum + part.exerciseCount, 0)}/>
     </div>
   )
 }
